@@ -4,10 +4,12 @@ let particles = [];
 let rect = canvas.getBoundingClientRect();
 const colors = ['#ff598c', '#42e695', '#3bb2b8', '#f9d423', '#6e8efb'];
 if (window.innerWidth<=425){
+    rect = canvas.getBoundingClientRect();
     canvas.width=window.innerWidth
     canvas.height=800
     console.log(window.innerWidth)
 }else{
+    rect = canvas.getBoundingClientRect();
     canvas.width = 1000;
     canvas.height = 800;
 }

@@ -43,6 +43,7 @@ class Particle {
     }
 }
 canvas.addEventListener('mousemove', (e) => {
+    rect = canvas.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
     for (let i = 0; i < 3; i++) {
@@ -50,6 +51,7 @@ canvas.addEventListener('mousemove', (e) => {
     }
 });
 canvas.addEventListener('touchmove',(e)=>{
+    rect = canvas.getBoundingClientRect();
     e.preventDefault();
     [...e.touches].forEach(l=>{
         const mouseX = l.clientX - rect.left;
